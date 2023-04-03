@@ -40,7 +40,7 @@ replacement for wnaspi32.dll for modern systems, and remote (TCP) communication
 * Edit wnaspi32.cfg, and change the first 2 parameters:
     * tcp_enabled: set to 1
     * target_ip: set to 127.0.0.1
-* Run the iMekugi SCSI server application (scsiserv32.exe, scsiserv64.exe or scsiserv) a first time
+* Run the iMekugi SCSI server application (scsiserv32.exe, scsiserv64.exe or scsiserv) a first time - AS ADMINISTRATOR
   * This will create a configuration file scsiserv.cfg, and exit, this is normal.
     * This will be prefilled with devices found on the system. If you forgot to connect your SCSI device at this point, just delete scsiserv.cfg, and try again.
       * Under Windows, you need to connect the SCSI devices when the pc boots, so you'll have to reboot
@@ -53,6 +53,7 @@ replacement for wnaspi32.dll for modern systems, and remote (TCP) communication
           * sudo chmod 777 /dev/sg*
           * ls -al /dev/sg*
   * Edit scsiserv.cfg to map the detected SCSI devices to the desired host adapter id/target id/lun id
+  * "AS ADMINISTRATOR" is needed, because we're doing low-level access to the SCSI device 
 * Run the iMekugi SCSI server application (scsiserv32.exe, scsiserv64.exe or scsiserv) a 2nd time - AS ADMINISTRATOR
   * This time the iMekugi SCSI server application should be waiting for a connection
   * "AS ADMINISTRATOR" is needed, because we're doing low-level access to the SCSI device 
