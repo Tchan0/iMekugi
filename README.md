@@ -23,10 +23,10 @@ replacement for wnaspi32.dll for modern systems, and remote (TCP) communication
 
 ## 3. How To Use - As a wnaspi32.dll replacement
 * Copy the iMekugi wnaspi32.dll to the folder of your SCSI program
-* Run your SCSI program a first time:
+* Run your SCSI program a first time  - AS ADMINISTRATOR:
   * your SCSI program will say something like "no device detected", that's normal.
   * wnaspi32.dll will create a config file (wnaspi32.cfg) & a log file (wnaspi32.log)
-* Run your SCSI program a 2nd time, this time it should work
+* Run your SCSI program a 2nd time - AS ADMINISTRATOR, this time it should work
   * if you still have problems, check the wnaspi32.log file.
     * the detail level of the logging can be increased by changing the last 2 parameters in the wnaspi32.cfg file:
       * enable_logging: 1=core, 2=low, 3=full detail
