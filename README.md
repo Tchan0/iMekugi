@@ -46,6 +46,7 @@ replacement for wnaspi32.dll for modern systems, and remote (TCP) communication
       * Under Windows, you need to connect the SCSI devices when the pc boots, so you'll have to reboot
       * Under Linux, a rescan of the SCSI bus can be launched via: sudo rescan-scsi-bus
         * Note that "lsscsi" is needed on your system (eg: sudo apt-get install -y lsscsi)
+        * You might also want the "rescan-scsi-bus" script (eg: sudo apt-get install -y scsitools)
         * eg to launch it with detailed max 50MB log, listening on port 7032:  sudo ./scsiserv 7032 3 50
         * You might need to do a chmod to change the device access rights, eg:
           * lsscsi -g
