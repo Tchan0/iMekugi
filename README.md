@@ -7,7 +7,7 @@ replacement for wnaspi32.dll for modern systems, and remote (TCP) communication
 * For advanced users:
   * can expose devices as if they were linked to another host adapter
     * This is particularly useful for old SCSI programs that only support host adapter id 0
-  * you can now launch your legacy SCSI program from a pc/laptop without SCSI card, and communicate with a SCSI device connected to another computer that has a SCSI card.
+  * you can now launch your legacy SCSI program from a pc/laptop without SCSI card, and communicate with a SCSI device connected to another computer (running Windows or Linux) that has a SCSI card.
 * For Virtual Machine users:
   * can forward SCSI calls made to wnaspi32.dll from a VM to the host pc or another pc, via TCP
     * the host or other pc can be running Windows or Linux
