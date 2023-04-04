@@ -71,7 +71,7 @@ replacement for wnaspi32.dll for modern systems, and remote (TCP) communication
     * don't forget to launch the iMekugi SCSI server application AS ADMINISTRATOR
 
 ## 6. How to build
-* wnaspi32.dll, scsiserv32.exe & scsiserv65.exe:
+* wnaspi32.dll, scsiserv32.exe & scsiserv64.exe:
   * you can find them pre-compiled in the zip file in the /binaries folder
 * scsiserv (Linux version of the iMekugi SCSI server:
   * make clean
