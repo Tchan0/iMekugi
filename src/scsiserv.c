@@ -178,7 +178,7 @@ int createConfigFile(void)
  if (!pDevList)	pDevList = scsiGetDeviceList();
  id = -1;
  while (scsiGetNextDevice(pDevList, &id, &pDev))
-	fprintf(fout, "%s,%s,%d,%d,%d,%d,%d,%d,0,logger%03d.log,0,50\r\n", pDev->vendor, pDev->model,
+	fprintf(fout, "%s,%s,%d,%d,%d,%d,%d,%d,0,logger%03d.log,0,50\r\n", pDev->vendor, pDev->model[0] == 0x00 ? "*" : pDev->model,
 		pDev->real_hostId, pDev->real_targetId, pDev->real_lunId,
 		pDev->hostId, pDev->targetId, pDev->lunId, id);
 
