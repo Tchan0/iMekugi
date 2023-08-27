@@ -194,9 +194,10 @@ PMSDEV scsiGetDeviceByVendorAndModel (PMSDEVLIST pDevList, PMSDEV pDev)
 
  i = -1;
  while (scsiGetNextDevice(pDevList, &i, &pTmpDev)){
-	if ((!strcmp((char*)pTmpDev->vendor, (char*)pDev->vendor)) &&
-		(!strcmp((char*)pTmpDev->model, (char*)pDev->model)))
-		return (pTmpDev);
+	if (!strcmp((char*)pTmpDev->vendor, (char*)pDev->vendor)){
+		if ((pDev->model[0] == '*') || (!strcmp((char*)pTmpDev->model, (char*)pDev->model)))
+			return (pTmpDev);
+	}
  }
 
  return (NULL);
@@ -212,9 +213,10 @@ PMSDEV scsiGetDeviceByVendorAndModelStr (PMSDEVLIST pDevList, char* vendor, char
 
  i = -1;
  while (scsiGetNextDevice(pDevList, &i, &pTmpDev)){
-	if ((!strcmp((char*)pTmpDev->vendor, (char*)vendor)) &&
-		(!strcmp((char*)pTmpDev->model, (char*)model)))
-		return (pTmpDev);
+	if (!strcmp((char*)pTmpDev->vendor, (char*)vendor)){
+		if ((model[0] == '*') || (!strcmp((char*)pTmpDev->model, (char*)model)))
+			return (pTmpDev);
+	}
  }
 
  return (NULL);
